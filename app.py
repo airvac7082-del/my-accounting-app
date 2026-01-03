@@ -5,7 +5,7 @@ import pandas as pd
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frxPEOivJ4ZCYqfH7-E"
 # 탭(워크시트) 이름별로 데이터를 가져오는 주소 설정
 FIRE_URL = f"{SHEET_URL}/export?format=csv&gid=0"
-TOWN_URL = f"{SHEET_URL}/export?format=csv&gid=1119796030"
+TOWN_URL = f"{SHEET_URL}/export?format=csv&gid=611290830"
 
 st.set_page_config(page_title="총무 시스템", layout="wide")
 
