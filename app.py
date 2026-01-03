@@ -14,7 +14,7 @@ st.sidebar.header("📂 관리 모임 선택")
 mode = st.sidebar.radio("어느 장부를 보실까요?", ["소방대", "마을"])
 
 # 선택된 모임에 따라 데이터 주소 변경
-current_url = FIRE_URL if mode == "소방대" else 마을_URL
+current_url = FIRE_URL if mode == "소방대" else TOWN_URL
 
 @st.cache_data(ttl=10)
 def load_data(url):
