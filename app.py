@@ -1,9 +1,8 @@
-
 import streamlit as st
 import pandas as pd
 
 # 구글 시트 링크 (기존 것 그대로 사용)
-SHEET_URL = "총무님의_구글시트_링크"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frxPEOivJ4ZCYqfH7-E/edit?gid=0#gid=0"
 # 탭(워크시트) 이름별로 데이터를 가져오는 주소 설정
 FIRE_URL = SHEET_URL.replace('/edit?usp=sharing', '/gviz/tq?tqx=out:csv&sheet=소방대')
 TOWN_URL = SHEET_URL.replace('/edit?usp=sharing', '/gviz/tq?tqx=out:csv&sheet=마을')
