@@ -4,8 +4,8 @@ import pandas as pd
 # 구글 시트 링크 (기존 것 그대로 사용)
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frxPEOivJ4ZCYqfH7-E/edit?usp=sharing"
 # 탭(워크시트) 이름별로 데이터를 가져오는 주소 설정
-FIRE_URL = SHEET_URL.replace('/edit?usp=sharing', '/gviz/tq?tqx=out:csv&sheet=소방대')
-TOWN_URL = SHEET_URL.replace('/edit?usp=sharing', '/gviz/tq?tqx=out:csv&sheet=마을')
+FIRE_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=소방대'
+TOWN_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=마을'
 
 st.set_page_config(page_title="통합 총무 관리 시스템", layout="wide")
 
