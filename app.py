@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 
 # 구글 시트 링크 (기존 것 그대로 사용)
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frxPEOivJ4ZCYqfH7-E/edit?usp=sharing"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frxPEOivJ4ZCYqfH7-E"
 # 탭(워크시트) 이름별로 데이터를 가져오는 주소 설정
-FIRE_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=소방대'
-TOWN_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=마을'
+FIRE_URL = f"{SHEET_URL}/export?format=csv&gid=0"
+TOWN_URL = f"{SHEET_URL}/export?format=csv&gid=1119796030"
 
 st.set_page_config(page_title="총무 시스템", layout="wide")
 
