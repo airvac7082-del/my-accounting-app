@@ -7,14 +7,14 @@ SHEET_URL = "https://docs.google.com/spreadsheets/d/1BxxUZkaEQIRArzKSAe24hTC0frx
 FIRE_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=소방대'
 TOWN_URL = SHEET_URL.split('/edit')[0] + '/gviz/tq?tqx=out:csv&sheet=마을'
 
-st.set_page_config(page_title="통합 총무 관리 시스템", layout="wide")
+st.set_page_config(page_title="총무 시스템", layout="wide")
 
 # 사이드바에서 모임 선택
 st.sidebar.header("📂 관리 모임 선택")
 mode = st.sidebar.radio("어느 장부를 보실까요?", ["소방대", "마을"])
 
 # 선택된 모임에 따라 데이터 주소 변경
-current_url = FIRE_URL if mode == "소방대" else TOWN_URL
+current_url = FIRE_URL if mode == "소방대" else 마을_URL
 
 @st.cache_data(ttl=10)
 def load_data(url):
